@@ -1,0 +1,20 @@
+version: '2'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: my-rabbit
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+  work-dispatcher:
+    image: work-dispatcher:v2
+    ports:
+      - "8080:8080"
+    links:
+      - rabbitmq
+  work-handler:
+    image: work-handler:v2
+    ports:
+      - "8081:8081"
+    links:
+      - rabbitmq

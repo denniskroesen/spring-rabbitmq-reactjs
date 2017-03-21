@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: work-dispatcher-tier
+spec:
+  type: NodePort
+  ports:
+      - port: 8080
+  selector:
+    app: work-dispatcher
+    tier: app
+  type: LoadBalancer
