@@ -27,7 +27,7 @@ mvn spring-boot:run
 ----
 
 
-* Create dummy work units by calling a controller endpoint:
+* Create dummy work units by calling a controllers endpoint:
 
 [source]
 ----

@@ -5,8 +5,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class WorkUnit {
 
-    private final String id;
-    private final String definition;
+    private String id;
+    private String definition;
+
+    public WorkUnit() {}
 
     @JsonCreator
     public WorkUnit(@JsonProperty("id") String id,
